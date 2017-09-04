@@ -1,11 +1,6 @@
-var app = function() {
-
-  addCat("Serj", "Chicken", "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg");
-
-
-
-}
-
+var CATS_ARRAY = [
+{name: "Serj", favFood: "Salmon", link:"https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg"}
+]
 
 var addCat = function(name, favFood, link){
 
@@ -31,6 +26,12 @@ var addCat = function(name, favFood, link){
   var cats = document.querySelector('#cats');
   cats.appendChild(catUl);
 
+}
+
+var app = function() {
+for (var cat of CATS_ARRAY){
+  addCat(cat.name, cat.favFood, cat.link);
+  }
 }
 
 window.onload = app;
