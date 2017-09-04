@@ -1,24 +1,27 @@
 var app = function() {
 
-  addCat();
+  addCat("Serj", "Chicken", "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg");
+
+
 
 }
 
-var addCat = function(name){
+
+var addCat = function(name, favFood, link){
 
   var catUl = document.createElement('ul');
   catUl.classList.add('cat');
 
   var catNameLi = document.createElement('li');
-  catNameLi.innerText = "Roma";
+  catNameLi.innerText = name;
 
   var catFoodLi = document.createElement('li');
-  catFoodLi.innerText = "Tuna";
+  catFoodLi.innerText = favFood;
 
   var catPhotoLi = document.createElement('li');
   var catPhoto = document.createElement('img');
   catPhoto.width = 500;
-  catPhoto.src = "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg"
+  catPhoto.src = link;
 
   catPhotoLi.appendChild(catPhoto);
   catFoodLi.appendChild(catPhotoLi);
