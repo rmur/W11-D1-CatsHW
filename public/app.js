@@ -16,8 +16,11 @@ var addCat = function(name){
   catFoodLi.innerText = "Tuna";
 
   var catPhotoLi = document.createElement('li');
-  catPhotoLi.innerText = "There will be picture";
+  var catPhoto = document.createElement('img');
+  catPhoto.width = 500;
+  catPhoto.src = "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg"
 
+  catPhotoLi.appendChild(catPhoto);
   catFoodLi.appendChild(catPhotoLi);
   catNameLi.appendChild(catFoodLi);
   catUl.appendChild(catNameLi);
